@@ -23,13 +23,8 @@ use Symfony\Component\Validator\Constraints\Length;
  *              "method"= "GET",
  *              "path" = "/admin/users"
  *              
- *       },
- *       "addUsers" = {
- *              "method"= "POST",
- *              "path" = "/admin/users"
- *              
- *           },
- * 
+ *       }
+ *      
  *   },
  * itemOperations = {
  *      "getUsersById" = {

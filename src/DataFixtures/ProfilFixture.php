@@ -15,7 +15,7 @@ public $tab=['ADMIN','Apprenant','Formateur','Cm'];
 
     public function load(ObjectManager $manager)
     {
-        for ($p=0;$p<4;$p++){
+        for ($p=0;$p<$tab;$p++){
             $profil= new Profils();
             $profil->setLibelle($this->tab[$p]);
             $this->addReference(self::REF.$p,$profil);

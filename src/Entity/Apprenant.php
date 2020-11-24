@@ -19,6 +19,15 @@ class Apprenant extends User
      */
     private $statut;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=ProfilsDeSortie::class, inversedBy="apprenant")
+     */
+    private $profilsDeSortie;
+
+   
+    
+    
+
    
     public function getStatut(): ?string
     {
@@ -31,4 +40,20 @@ class Apprenant extends User
 
         return $this;
     }
+
+    public function getProfilsDeSortie(): ?ProfilsDeSortie
+    {
+        return $this->profilsDeSortie;
+    }
+
+    public function setProfilsDeSortie(?ProfilsDeSortie $profilsDeSortie): self
+    {
+        $this->profilsDeSortie = $profilsDeSortie;
+
+        return $this;
+    }
+
+    
+
+   
 }
